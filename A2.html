@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Activity 2</title>
+    </head>
+    <body>
+        <p>click on the button below</p>
+        <button onclick="myfunction()">Click me!</button>
+        <p id="hour"></p>
+        <p id="greeting"></p>
+        <script>
+            function myfunction(){
+                var greeting;
+                var time = new Date().getHours();
+                if(time<10){
+                    greeting = "Good morning";
+                }
+                else if(time<20){
+                    greeting="Good day";
+                }
+                else{
+                    greeting = "Good evening";
+                }
+                document.getElementById("hour").innerHTML="current hour :"+time;
+                 document.getElementById("greeting").innerHTML = greeting;
+            }
+        </script>
+    </body>
+</html>
